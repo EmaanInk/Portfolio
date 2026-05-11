@@ -1,0 +1,471 @@
+/* Reset default browser spacing and sizing behavior */
+* {
+  margin: 0; /* Remove default outside spacing */
+  padding: 0; /* Remove default inside spacing */
+  box-sizing: border-box; /* Include border + padding inside width/height */
+}
+
+/* Base body style for whole page */
+body {
+  font-family: "Inter", sans-serif; /* Main font */
+  background-color: #ffffff; /* White page background */
+  color: #1a1a1a; /* Default dark text color */
+  line-height: 1.6; /* Comfortable line spacing */
+}
+
+/* Enable smooth anchor scrolling globally */
+html {
+  scroll-behavior: smooth; /* Smooth movement when jumping to #sections */
+}
+
+/* Navbar container */
+.navbar {
+  position: fixed; /* Keep navbar always visible at top */
+  top: 0; /* Stick to top edge */
+  width: 100%; /* Full-width navbar */
+  background-color: #ffffff; /* White navbar background */
+  border-bottom: 2px solid #8b0000; /* Dark red bottom border */
+  padding: 16px 48px; /* Top/bottom and left/right spacing */
+  display: flex; /* Flex layout */
+  justify-content: space-between; /* Logo left, links right */
+  align-items: center; /* Vertically center items */
+  z-index: 1000; /* Keep navbar above other content */
+}
+
+/* Logo text in navbar */
+.nav-logo {
+  font-size: 20px; /* Logo text size */
+  font-weight: 700; /* Bold logo */
+  color: #8b0000; /* Brand red */
+  letter-spacing: 1px; /* Slight letter spacing */
+}
+
+/* Wrapper for nav links */
+.nav-links {
+  display: flex; /* Horizontal links */
+  gap: 32px; /* Space between links */
+}
+
+/* Default nav link style */
+.nav-links a {
+  text-decoration: none; /* Remove underline */
+  color: #1a1a1a; /* Dark text */
+  font-weight: 500; /* Medium font weight */
+  font-size: 15px; /* Link text size */
+  transition: color 0.2s ease; /* Smooth color transition */
+}
+
+/* Hover style for nav links */
+.nav-links a:hover {
+  color: #8b0000; /* Turn red on hover */
+}
+
+/* Active nav link (current section) */
+.nav-links a.active {
+  color: #8b0000; /* Red active color */
+  font-weight: 700; /* Bolder for active link */
+  position: relative; /* Needed for underline pseudo-element */
+}
+
+/* Small underline under active nav link */
+.nav-links a.active::after {
+  content: ""; /* Required to show pseudo-element */
+  position: absolute; /* Position relative to link */
+  left: 0; /* Start from left edge */
+  bottom: -6px; /* Place below text */
+  width: 100%; /* Full link width */
+  height: 2px; /* Underline thickness */
+  background-color: #8b0000; /* Underline color */
+}
+
+/* Navbar style after scrolling */
+.navbar.navbar-scrolled {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); /* Soft shadow */
+  background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
+  backdrop-filter: blur(6px); /* Blur content behind navbar */
+}
+
+/* Hero section */
+.hero {
+  min-height: 100vh; /* Full viewport height */
+  display: flex; /* Flex layout for alignment */
+  align-items: center; /* Vertical center */
+  padding: 100px 48px 60px; /* Top accounts for fixed navbar */
+  background-color: #ffffff; /* White background */
+}
+
+/* Hero content wrapper */
+.hero-content {
+  max-width: 1100px; /* Max content width */
+  margin: 0 auto; /* Center horizontally */
+  display: flex; /* Side-by-side text and image */
+  align-items: center; /* Align vertical center */
+  justify-content: space-between; /* Space between text and image */
+  gap: 60px; /* Gap between columns */
+  width: 100%; /* Full available width */
+}
+
+/* Hero text column */
+.hero-text {
+  flex: 1; /* Take remaining space */
+}
+
+/* Greeting text */
+.hero-greeting {
+  font-size: 16px; /* Small intro text */
+  color: #8b0000; /* Brand red */
+  font-weight: 500; /* Medium weight */
+  letter-spacing: 2px; /* Spaced letters */
+  text-transform: uppercase; /* Uppercase style */
+  margin-bottom: 8px; /* Space below */
+}
+
+/* Main name heading */
+.hero-name {
+  font-size: 56px; /* Big heading */
+  font-weight: 700; /* Bold */
+  color: #1a1a1a; /* Dark text */
+  line-height: 1.1; /* Tight heading line height */
+  margin-bottom: 8px; /* Space below */
+}
+
+/* Role/title line */
+.hero-title {
+  font-size: 24px; /* Medium heading */
+  font-weight: 400; /* Normal weight */
+  color: #8b0000; /* Brand red */
+  margin-bottom: 20px; /* Space below */
+}
+
+/* Typing cursor effect completion class */
+.hero-title.typing-done::after {
+  content: " |"; /* Cursor character */
+  animation: blink 0.8s infinite; /* Blinking cursor animation */
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+  50% {
+    opacity: 0; /* Hide midway for blink */
+  }
+}
+
+/* Hero description */
+.hero-tagline {
+  font-size: 18px; /* Body size */
+  color: #555555; /* Muted gray text */
+  max-width: 500px; /* Limit line length */
+  line-height: 1.7; /* Readable spacing */
+  margin-bottom: 36px; /* Space below */
+}
+
+/* Wrapper for hero buttons */
+.hero-buttons {
+  display: flex; /* Horizontal buttons */
+  gap: 16px; /* Space between buttons */
+}
+
+/* Hero image wrapper */
+.hero-image {
+  flex-shrink: 0; /* Prevent image shrinking */
+}
+
+/* Hero profile image */
+.hero-image img {
+  width: 320px; /* Fixed width */
+  height: 320px; /* Fixed height */
+  border-radius: 50%; /* Circle image */
+  object-fit: cover; /* Crop to fill circle */
+  border: 4px solid #8b0000; /* Red border ring */
+  box-shadow: 0 20px 60px rgba(139, 0, 0, 0.2); /* Soft red shadow */
+}
+
+/* Primary button style */
+.btn-primary {
+  background-color: #8b0000; /* Solid red background */
+  color: white; /* White text */
+  padding: 12px 28px; /* Button spacing */
+  border-radius: 8px; /* Rounded corners */
+  text-decoration: none; /* No underline */
+  font-weight: 600; /* Semi-bold */
+  font-size: 15px; /* Text size */
+  transition: all 0.2s ease; /* Smooth hover animation */
+  display: inline-block; /* Respect padding/margins cleanly */
+}
+
+/* Primary button hover */
+.btn-primary:hover {
+  background-color: #a50000; /* Slightly lighter red */
+  transform: translateY(-2px); /* Lift effect */
+  box-shadow: 0 8px 20px rgba(139, 0, 0, 0.3); /* Stronger shadow */
+}
+
+/* Secondary button style */
+.btn-secondary {
+  background-color: transparent; /* Transparent background */
+  color: #8b0000; /* Red text */
+  padding: 12px 28px; /* Button spacing */
+  border-radius: 8px; /* Rounded corners */
+  text-decoration: none; /* No underline */
+  font-weight: 600; /* Semi-bold */
+  font-size: 15px; /* Text size */
+  border: 2px solid #8b0000; /* Red border */
+  transition: all 0.2s ease; /* Smooth hover */
+  display: inline-block; /* Proper box behavior */
+}
+
+/* Secondary button hover */
+.btn-secondary:hover {
+  background-color: #8b0000; /* Fill with red */
+  color: white; /* White text on hover */
+  transform: translateY(-2px); /* Lift effect */
+}
+
+/* Disabled button style */
+.btn-disabled {
+  background-color: #cccccc; /* Gray background */
+  color: #888888; /* Gray text */
+  padding: 12px 28px; /* Button spacing */
+  border-radius: 8px; /* Rounded corners */
+  text-decoration: none; /* No underline */
+  font-weight: 600; /* Semi-bold */
+  font-size: 15px; /* Text size */
+  display: inline-block; /* Keep button shape */
+  cursor: not-allowed; /* Disabled cursor */
+}
+
+/* Shared container for sections */
+.section-container {
+  max-width: 1100px; /* Max width */
+  margin: 0 auto; /* Center container */
+  padding: 80px 48px; /* Vertical + horizontal spacing */
+}
+
+/* Section heading */
+.section-title {
+  font-size: 36px; /* Big heading */
+  font-weight: 700; /* Bold */
+  color: #1a1a1a; /* Dark text */
+  margin-bottom: 48px; /* Space below */
+  position: relative; /* Needed for decorative line */
+}
+
+/* Decorative red line under section title */
+.section-title::after {
+  content: ""; /* Required pseudo-element */
+  position: absolute; /* Position under title */
+  bottom: -12px; /* Move below title text */
+  left: 0; /* Align to left */
+  width: 60px; /* Line width */
+  height: 4px; /* Line thickness */
+  background-color: #8b0000; /* Red line */
+  border-radius: 2px; /* Rounded ends */
+}
+
+/* About section background */
+.about {
+  background-color: #fafafa; /* Light gray section background */
+}
+
+/* About paragraph text */
+.about-text p {
+  font-size: 17px; /* Readable body size */
+  color: #444444; /* Muted dark gray */
+  line-height: 1.8; /* Comfortable paragraph spacing */
+  margin-bottom: 16px; /* Space between paragraphs */
+  max-width: 700px; /* Limit text width */
+}
+
+/* Projects section background */
+.projects {
+  background-color: #ffffff; /* White section */
+}
+
+/* Projects grid layout */
+.projects-grid {
+  display: grid; /* Grid layout */
+  grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+  gap: 28px; /* Space between cards */
+}
+
+/* Individual project card */
+.project-card {
+  background-color: #ffffff; /* White card */
+  border: 2px solid #e8e8e8; /* Light border */
+  border-radius: 16px; /* Rounded corners */
+  padding: 28px; /* Inner spacing */
+  transition: all 0.3s ease; /* Smooth hover */
+  display: flex; /* Flex layout */
+  flex-direction: column; /* Vertical content flow */
+  gap: 16px; /* Space between inner parts */
+}
+
+/* Hover effect for project card */
+.project-card:hover {
+  border-color: #8b0000; /* Red border on hover */
+  transform: translateY(-4px); /* Lift effect */
+  box-shadow: 0 12px 40px rgba(139, 0, 0, 0.15); /* Soft shadow */
+}
+
+/* Coming soon card slightly faded */
+.coming-soon {
+  opacity: 0.7; /* Visual indicator: not fully active */
+}
+
+/* Project card top row */
+.project-header {
+  display: flex; /* Horizontal alignment */
+  align-items: center; /* Vertical alignment */
+  gap: 12px; /* Space between emoji and title */
+}
+
+/* Project emoji icon */
+.project-emoji {
+  font-size: 28px; /* Emoji size */
+}
+
+/* Project name */
+.project-name {
+  font-size: 20px; /* Heading size */
+  font-weight: 700; /* Bold */
+  color: #1a1a1a; /* Dark text */
+}
+
+/* Project description */
+.project-desc {
+  font-size: 14px; /* Body size */
+  color: #666666; /* Muted text */
+  line-height: 1.6; /* Readable spacing */
+}
+
+/* Wrapper for technology tags */
+.project-tags {
+  display: flex; /* Horizontal tags */
+  flex-wrap: wrap; /* Move to next line if needed */
+  gap: 8px; /* Space between tags */
+}
+
+/* Single technology tag */
+.tag {
+  background-color: #fff0f0; /* Very light red background */
+  color: #8b0000; /* Red text */
+  padding: 4px 12px; /* Tag spacing */
+  border-radius: 20px; /* Pill shape */
+  font-size: 12px; /* Small text */
+  font-weight: 500; /* Medium weight */
+}
+
+/* Project links row */
+.project-links {
+  display: flex; /* Horizontal buttons */
+  gap: 12px; /* Space between buttons */
+  margin-top: auto; /* Push links to card bottom */
+}
+
+/* Skills section background */
+.skills {
+  background-color: #fafafa; /* Light gray section */
+}
+
+/* Skills grid layout */
+.skills-grid {
+  display: grid; /* Grid layout */
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 32px; /* Space between cards */
+}
+
+/* Skill category card */
+.skill-category {
+  background-color: #ffffff; /* White card */
+  border: 2px solid #e8e8e8; /* Light border */
+  border-radius: 12px; /* Rounded corners */
+  padding: 24px; /* Inner spacing */
+}
+
+/* Skill category heading */
+.category-title {
+  font-size: 16px; /* Heading size */
+  font-weight: 600; /* Semi-bold */
+  color: #8b0000; /* Red text */
+  margin-bottom: 16px; /* Space below heading */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 1px; /* Spaced letters */
+}
+
+/* Skill tags wrapper */
+.skill-tags {
+  display: flex; /* Horizontal tags */
+  flex-wrap: wrap; /* Wrap to new lines */
+  gap: 8px; /* Space between tags */
+}
+
+/* Single skill tag */
+.skill-tag {
+  background-color: #fff0f0; /* Light red background */
+  color: #8b0000; /* Red text */
+  padding: 6px 14px; /* Tag spacing */
+  border-radius: 20px; /* Pill shape */
+  font-size: 13px; /* Text size */
+  font-weight: 500; /* Medium weight */
+}
+
+/* Contact section background */
+.contact {
+  background-color: #ffffff; /* White section */
+}
+
+/* Contact intro text */
+.contact-subtitle {
+  font-size: 17px; /* Body size */
+  color: #555555; /* Muted gray */
+  margin-bottom: 40px; /* Space below */
+  max-width: 600px; /* Limit width */
+}
+
+/* Contact cards row */
+.contact-links {
+  display: flex; /* Horizontal layout */
+  gap: 20px; /* Space between cards */
+}
+
+/* Contact card style */
+.contact-card {
+  display: flex; /* Flex layout */
+  flex-direction: column; /* Vertical stack */
+  align-items: center; /* Center items */
+  gap: 8px; /* Space between icon and label */
+  background-color: #ffffff; /* White background */
+  border: 2px solid #e8e8e8; /* Light border */
+  border-radius: 12px; /* Rounded corners */
+  padding: 24px 36px; /* Inner spacing */
+  text-decoration: none; /* Remove underline */
+  transition: all 0.2s ease; /* Smooth hover */
+}
+
+/* Contact card hover */
+.contact-card:hover {
+  border-color: #8b0000; /* Red border */
+  transform: translateY(-4px); /* Lift up */
+  box-shadow: 0 8px 24px rgba(139, 0, 0, 0.15); /* Soft shadow */
+}
+
+/* Contact icon size */
+.contact-icon {
+  font-size: 32px; /* Icon size */
+}
+
+/* Contact label text */
+.contact-label {
+  font-size: 14px; /* Label size */
+  font-weight: 600; /* Semi-bold */
+  color: #1a1a1a; /* Dark text */
+}
+
+/* Footer style */
+.footer {
+  background-color: #8b0000; /* Red background */
+  color: white; /* White text */
+  text-align: center; /* Centered content */
+  padding: 24px; /* Inner spacing */
+  font-size: 14px; /* Text size */
+}

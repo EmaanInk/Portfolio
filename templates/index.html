@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emaan Khan — AI Application Developer</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="nav-logo">Emaan Khan</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-greeting">Hi, I'm</p>
+        <h1 class="hero-name">Emaan Khan</h1>
+        <h2 class="hero-title">AI Application Developer</h2>
+        <p class="hero-tagline">I can't sleep until the code works — and I build AI that works for people.</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn-primary">See My Work</a>
+          <a href="#contact" class="btn-secondary">Get In Touch</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="/static/images/profile.jpg" alt="Emaan Khan" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about" id="about">
+    <div class="section-container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>I'm a 2nd year CS student at UVAS Lahore who got obsessed with AI engineering after building my first chatbot.</p>
+          <p>I don't wait for final year to build things. I've already deployed three AI-powered applications that real people are using right now.</p>
+          <p>I want to be on the side that builds AI — not fears it.</p>
+          <p>Currently working toward my biggest project yet — Raah, an AI career guidance platform built for students like me who were lost and needed a real mentor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section class="projects" id="projects">
+    <div class="section-container">
+      <h2 class="section-title">What I've Built</h2>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-emoji">🍳</span>
+            <h3 class="project-name">CookBot</h3>
+          </div>
+          <p class="project-desc">AI cooking assistant with real-time streaming, ingredient checker with substitution suggestions, and selective recipe saving.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Streamlit</span>
+            <span class="tag">Groq API</span>
+          </div>
+          <div class="project-links">
+            <a href="https://emaan-cookbot.streamlit.app" target="_blank" class="btn-primary">Live Demo</a>
+            <a href="https://github.com/EmaanInk/CookBot_project" target="_blank" class="btn-secondary">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card" >
+          <div class="project-header">
+            <span class="project-emoji">📄</span>
+            <h3 class="project-name">Summafy</h3>
+          </div>
+          <p class="project-desc">AI document intelligence tool that reads PDF, DOCX, PPTX and TXT files. Summarize, quiz yourself, ask questions, and get deeper explanations.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Streamlit</span>
+            <span class="tag">Groq API</span>
+            <span class="tag">PyMuPDF</span>
+          </div>
+          <div class="project-links">
+            <a href="https://summafy.streamlit.app" target="_blank" class="btn-primary">Live Demo</a>
+            <a href="https://github.com/EmaanInk/Summafy" target="_blank" class="btn-secondary">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-emoji">🧠</span>
+            <h3 class="project-name">DSA Master Bot</h3>
+          </div>
+          <p class="project-desc">Interactive DSA learning platform with structured lessons, AI tutor, visual diagrams, and multilingual code examples in 5 languages.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Streamlit</span>
+            <span class="tag">Graphviz</span>
+            <span class="tag">Groq API</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/EmaanInk/DSA-Master-Bot" target="_blank" class="btn-primary">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card coming-soon">
+          <div class="project-header">
+            <span class="project-emoji">🚀</span>
+            <h3 class="project-name">Raah</h3>
+          </div>
+          <p class="project-desc">AI career guidance platform for Pakistani tech students. Personalized roadmaps, real deadlines, specific resources, and a mentor that actually convinces you.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Flask</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Groq API</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn-disabled">Coming Soon</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section class="skills" id="skills">
+    <div class="section-container">
+      <h2 class="section-title">What I Work With</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3 class="category-title">Languages</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">HTML & CSS</span>
+            <span class="skill-tag">C++</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="category-title">Frameworks & Tools</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Streamlit</span>
+            <span class="skill-tag">Flask</span>
+            <span class="skill-tag">Git & GitHub</span>
+            <span class="skill-tag">Groq API</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="category-title">AI & ML</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">LLMs</span>
+            <span class="skill-tag">Prompt Engineering</span>
+            <span class="skill-tag">RAG (Learning)</span>
+            <span class="skill-tag">LangChain (Learning)</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="category-title">Currently Building</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Raah</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Vector Databases</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact" id="contact">
+    <div class="section-container">
+      <h2 class="section-title">Let's Connect</h2>
+      <p class="contact-subtitle">I'm open to internship opportunities, collaborations, and interesting conversations about AI.</p>
+      <div class="contact-links">
+        <a href="mailto:emaankhanmail000@gmail.com" class="contact-card">
+          <span class="contact-icon">📧</span>
+          <span class="contact-label">Email</span>
+        </a>
+        <a href="https://linkedin.com/in/emaan-khan-476698407" target="_blank" class="contact-card">
+          <span class="contact-icon">💼</span>
+          <span class="contact-label">LinkedIn</span>
+        </a>
+        <a href="https://github.com/EmaanInk" target="_blank" class="contact-card">
+          <span class="contact-icon">🐙</span>
+          <span class="contact-label">GitHub</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Built by Emaan Khan — with Python, too much caffeine, and zero sleep 🚀</p>
+  </footer>
+
+  <script src="/static/js/main.js"></script>
+</body>
+</html>
